@@ -1,0 +1,14 @@
+{
+  "name": "needles_inks_api",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "python manage.py runserver 8001",
+    "migrate": "python manage.py makemigrations && python manage.py migrate",
+    "freeze": "pip freeze > requirements.txt",
+    "install": "pip install -r requirements.txt",
+    "generate": "python manage.py startapp"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
