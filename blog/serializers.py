@@ -73,9 +73,8 @@ class PostDetailSerializer(serializers.ModelSerializer):
 
 
 class CategorySerializer(serializers.ModelSerializer):
-    posts = PostSerializer(many=True, read_only=True)
-
+    posts = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
     class Meta:
         model = Category
-        fields = ["id", "name", "slug", "created_at", "updated_at"]
+        fields = ["id", "name", "slug", "posts", "created_at", "updated_at"]
         read_only_fields = ["id", "created_at", "posts"]
