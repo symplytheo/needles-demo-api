@@ -6,31 +6,31 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('blog', '0001_initial'),
+        ("blog", "0001_initial"),
     ]
 
     operations = [
         migrations.RenameField(
-            model_name='comment',
-            old_name='author_name',
-            new_name='author',
+            model_name="comment",
+            old_name="author_name",
+            new_name="author",
         ),
         migrations.RemoveField(
-            model_name='comment',
-            name='author_email',
+            model_name="comment",
+            name="author_email",
         ),
         migrations.RemoveField(
-            model_name='reply',
-            name='author_email',
+            model_name="reply",
+            name="author_email",
         ),
         migrations.RemoveField(
-            model_name='reply',
-            name='author_name',
+            model_name="reply",
+            name="author_name",
         ),
         migrations.AddField(
-            model_name='reply',
-            name='author',
-            field=models.CharField(default='', max_length=100),
+            model_name="reply",
+            name="author",
+            field=models.CharField(default="", max_length=100),
             preserve_default=False,
         ),
     ]
