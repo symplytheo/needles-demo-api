@@ -19,6 +19,7 @@ def index(request):
 class CategoryListCreate(generics.ListCreateAPIView):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
+    pagination_class = None  # disables pagination here
 
 
 class PostListCreate(generics.ListCreateAPIView):
