@@ -1,4 +1,4 @@
-# Needles Inks API
+# Needles Demo API
 
 A Django REST API for a blog platform with categories, posts, comments, and nested replies. Built with Django REST Framework and featuring custom JSON response formatting and pagination.
 
